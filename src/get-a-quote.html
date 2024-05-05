@@ -1,0 +1,40 @@
+@@include('html/head.html')
+<body>
+	@@include('html/header.html')
+	<section class="form-main">
+		<div class="container">
+			<div class="subtitle">
+				<h1 class="subtitle_text subtitle_black">REQUEST A QUOTE</h1>
+				</div>
+				<div class="form">
+					<form id="book-form" action="#"></form>			
+					<div class="form_item">
+						<input class="form_input" type="text" placeholder="Full Name*">
+					</div>
+					<div class="form_item">
+						<input class="form_input" type="text" placeholder="Company Name">
+					</div>
+					<div class="form_item">
+						<input class="form_input" type="email" placeholder="email address*">
+					</div>
+					<div class="form_item">
+						<input id="phone" class="form_input" type="tel" placeholder="phone number*">
+					</div>
+					<a class="privacy" href="privacy-policy.html">Data protected and privacy</a>
+					<button type="submit" class="button_small">REQUEST A QOTE</button>
+					</div>
+
+		</div>
+	</section>
+	<div class="overlay">
+		<div class="popup" id="thanks">
+			<div class="subtitle">
+				<h3>Thank you!</h3> 
+				<div class="mt40" >your REQUEST has been sent</div>
+			</div>
+			<div class="button_small popup_button">close</div>		
+		</div>
+	</div>
+	@@include('html/footer.html')
+	<script src="js/app.min.js"></script>
+</body>

@@ -1,0 +1,30 @@
+.get-quote {
+	background-color: $second-color;
+	padding: 50px 0;
+	&_border{ 
+		max-width: 1165px;
+		border: 8px solid $main-color;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 10px;
+		padding: 80px 50px;
+		gap: 52px;
+	}
+	&_text {
+		max-width: 680px;
+		color: $first-color;
+		text-align: center;
+	}
+	&_subtitle {
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 34px;
+	}
+	&_descr {
+		margin-top: 14px;
+		font-size: 16px;
+	}
+
+}

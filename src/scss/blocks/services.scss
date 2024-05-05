@@ -1,0 +1,70 @@
+.services {
+	height: 1190px;
+	padding: 150px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../../img/truck-driving-on-the-road-black-white-sketch-landscape-illustration-vector-2GNP7W5 1.png");
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&_descr {
+		display: block;
+		margin: 60px 0 0 0;
+		height: 140px;
+		width: 910px;
+		color: $second-color;
+		line-height: 28px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 500;
+	}
+	&_items {
+		width: 100%;
+		margin-top: 105px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	&_item {
+		position: relative;
+		max-width: 360px;
+		height: 500px;
+		overflow: hidden;
+	}
+	&_image {
+		display: inline-block;
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		position: relative;
+		transform: scale(1.2);
+		transition: all 0.3s ease;
+		&:hover {
+			transform: scale(1);
+			filter: invert(20%);
+		}
+	}
+	&_name {
+		position: absolute;
+		bottom: 20%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 24px;
+			color: $first-color;
+			letter-spacing: 1px;
+		}
+		&_line {
+			margin: 10px 0;
+			height: 4px;
+			width: 210px;
+			background-color: $first-color;
+		}
+	}
+}

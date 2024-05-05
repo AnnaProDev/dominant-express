@@ -1,0 +1,41 @@
+.main {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 45%;
+	&_first {
+		background-image: url("../img/main-background.png");
+	}
+	&_warehousing {
+		background-image: url("../img/bg_warehousing.png")
+	}
+	&_transloading {
+		background-image: url("../../img/bg-transloading.png")
+	}
+	&_trucking {
+		background-image: url("../../img/bg-trucking.png")
+	}
+	&_title {
+		color: $first-color;
+		font-size: 48px;
+		line-height: 60px;
+		font-weight: bold;
+		text-transform: uppercase;
+		&_second {
+			text-align: center;
+		}
+	}
+	&_descr {
+		margin-top: 50px;
+		width: 1100px;
+		font-size: 24px;
+		font-weight: bold;
+		color: $first-color;
+		line-height: 35px;
+		text-align: center;
+	}
+
+}

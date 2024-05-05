@@ -1,0 +1,38 @@
+.header {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	height: 100px;
+	background-color: rgba($color: $second-color, $alpha: 0.85);
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 102px;
+		padding: 0px 70px;
+	}
+	&_menu {
+		width: 915px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&_link {
+			color: $first-color;
+			text-transform:uppercase;
+			letter-spacing: 0.5px;
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			transition: all 0.3s ease;
+			&_red {
+				color: $main-color;
+				font-weight: bold;
+			}
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+}

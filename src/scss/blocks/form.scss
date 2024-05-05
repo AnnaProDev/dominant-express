@@ -1,0 +1,59 @@
+.form-main {
+	min-height: 750px;
+	color: $second-color;
+	padding: 200px 0 150px 0;
+	.container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.form {
+	padding: 40px 0;
+	&_title {
+		font-weight: 400;
+		font-size: 26px;
+		align-items: center;
+		text-transform: uppercase;
+		color: $first-color;
+	}
+	&_input{
+		margin-top: 15px;
+		padding: 16px 16px 16px 30px;
+		width: 560px;
+		height: 52px;
+		color:$first-color;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		border: 1px solid $second-color;
+		background-color: $first-color;
+		&::placeholder {
+			text-transform: uppercase;
+			color: $second-color;
+			opacity: 0.3;
+		}
+	}
+	.privacy {
+		display: block;
+		margin-top: 10px;
+		color: $second-color;
+		text-align: center;
+		transition: all 0.3s ease;
+		&:hover {
+			color: $main-color;
+		}
+	}
+	.button_small {
+		margin-top: 30px;
+		width: 100%;
+		color: $main-color;
+		font-weight: bold;
+		&:hover {
+			color: $first-color;
+		}
+	}
+}

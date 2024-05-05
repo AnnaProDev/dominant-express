@@ -1,0 +1,27 @@
+.about {
+	min-height: 815px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../img/about-bg.png");
+	padding: 150px 0;
+	&_info {
+		margin-top: 84px;
+		display: flex;
+		align-items:start;
+		justify-content: space-between;
+		gap: 56px;
+	}
+	&_text {
+		max-width: 742px;
+		min-height: 250px;
+		padding: 25px;
+		color: $first-color;
+		border: 4px solid $main-color;
+		line-height: 24px;
+		font-weight: 500;
+		p:nth-child(even) {
+			margin-top: 8px;
+		}
+		
+	}
+}

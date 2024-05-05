@@ -1,0 +1,74 @@
+
+//<Icons Fonts>=================================================================================
+//@import "icons";
+//</Icons Fonts>=================================================================================
+
+//<Default font>================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//</Default font>================================================================================
+
+//</FONTS>=======================================================================================
+
+//<VARIABLES>====================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$md1: 1460;
+$md2: 991.98;
+$md3: 639.98;
+$md4: 479.98;
+$main-color: #EB2A3B;
+$first-color: #EDE8E9;
+$second-color: #0E0E0E;
+$border: 4px solid $main-color;
+//</VARIABLES>====================================================================================
+
+//<NULL, COMMON PARAMETERS>========================================================================
+@import 'base/null';
+@import 'base/mixins';
+body {
+	font-family: "Montserrat", sans-serif;;
+	background-color: $first-color;
+	color: $second-color;
+	font-size: 16px;
+	box-sizing: border-box;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</NULL, COMMON PARAMETERS>========================================================================
+
+//<blocks>===================================================================================
+@import "blocks/common";
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/contacts";
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/reviews";
+@import "blocks/get_quote";
+@import "blocks/footer";
+@import "blocks/warehousing";
+@import "blocks/transloading";
+@import "blocks/trucking";
+@import "blocks/form";
+@import "blocks/popup";
+
+//</blocks>===================================================================================
+
+
+//<MAIN LAYOUT>=================================================================================
+.container {
+	max-width: 1650px;
+	padding: 0 245px;
+	margin: 0 auto;
+	@media (max-width: 991.98px) {
+		width: 100%;
+		padding: 0 20px;
+	}
+	@media (max-width: 767.98px){
+		padding: 0 10px;
+	}
+}
+//<MAIN LAYOUT>=================================================================================
+

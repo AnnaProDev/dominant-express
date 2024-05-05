@@ -1,0 +1,104 @@
+.transloading-about {
+	padding: 150px 0;
+	&_items {
+		margin-top: 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 40px;
+		counter-reset: numb;
+	}
+	&_item {
+		position: relative;
+		background-color: rgba($color: $second-color, $alpha: 0.8);
+		height: 180px;
+		width: 315px;
+		z-index: 1;
+		&:before {
+			position: absolute;
+			content: counter(numb);
+			counter-increment: numb;
+			color: rgba($color: $main-color, $alpha: 0.5);
+			font-size: 10.8em;
+			font-weight: 700;
+			top: 0em;
+			left: 1.1em;
+			opacity: var(--before-opacity, 1);
+			z-index: -1;
+			-webkit-transition: all ease .3s;
+			-moz-transition: all ease .3s;
+			-ms-transition: all ease .3s;
+			-o-transition: all ease .3s;
+			transition: all ease .3s;
+		}
+		&_content {
+			position: relative;
+			margin-top: 4.3em;
+			padding: 0 3em 3.1em 3em;
+			padding-bottom: 2.3em;
+			width: 210px;
+			color: $first-color;
+		}
+		&_title {
+			opacity: 1;
+			font-size: 26px;
+			font-weight: 600;
+			line-height: 30px;
+			transition: all ease .3s;
+			&_active {
+				opacity: 0;
+			}
+		}
+		&_descr {
+			opacity: 0;
+			position: absolute;
+			top: -50px;
+			left: 30px;
+			width: 260px;
+			transition: all ease .3s;
+    		transform: scale(0.5);
+			overflow: hidden;
+			line-height: 18px;
+			 &_active {
+				opacity: 1;
+				transform: scale(1);
+			 }
+
+		}
+	}
+}
+
+.transloading-solution {
+	max-height: 1750px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../../img/bg-transloading-solutions.png");
+	padding: 150px 0;
+	&_assets {
+		margin: 0 auto;
+		margin-top: 150px;
+	}
+	&_items {
+		height: 490px;
+		margin-top: 80px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		row-gap: 40px;
+		column-gap: 70px;
+		color: $first-color;
+		line-height: 38px;
+	}
+	&_item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		font-size: 22px;
+		height: 60px
+	}
+	&_text {
+		width: 490px;
+	}
+}

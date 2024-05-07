@@ -3,12 +3,13 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url("../../img/reviews-bg.png");
-	min-height: 1400px;
+	height: fit-content;
 	&_items {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 80px;
+		margin-top: 70px;
 	}
 	&_item {
 		position: relative;
@@ -41,6 +42,51 @@
 		&_author {
 			font-weight: 700;
 			margin-top: 10px;
+		}
+	}
+}
+
+@media (max-width: 1200.98px) {
+	.reviews {
+		padding: 100px 0;
+		&_item {
+			width: 100%;
+			&_text {
+				font-size: 14px;
+			}
+			&_icon {
+				width: 111px;
+				height: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 639.98px) {
+	.reviews {
+		&_item {
+			padding: 16px;
+			gap: 30px;
+			&_text {
+				font-size: 12px;
+				line-height: 16px;
+			}
+			&_icon {
+				width: 96px;
+				height: 85px;
+			}
+		}
+	}
+}
+
+@media (max-width: 479.98px) {
+	.reviews {
+		&_item {
+			padding:30px 12px 30px 50px;
+			height: fit-content;
+			&_icon {
+				display: none;
+			}
 		}
 	}
 }

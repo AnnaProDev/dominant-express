@@ -39,6 +39,7 @@
 			padding-bottom: 2.3em;
 			width: 210px;
 			color: $first-color;
+			transition: all ease .3s;
 		}
 		&_title {
 			opacity: 1;
@@ -51,6 +52,7 @@
 			}
 		}
 		&_descr {
+			visibility: hidden;
 			opacity: 0;
 			position: absolute;
 			top: -50px;
@@ -60,7 +62,9 @@
     		transform: scale(0.5);
 			overflow: hidden;
 			line-height: 18px;
+			transition: all ease .3s;
 			 &_active {
+				visibility: visible;
 				opacity: 1;
 				transform: scale(1);
 			 }
@@ -70,7 +74,7 @@
 }
 
 .transloading-solution {
-	max-height: 1750px;
+	height: fit-content;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url("../../img/bg-transloading-solutions.png");
@@ -84,7 +88,6 @@
 		margin-top: 80px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		flex-wrap: wrap;
 		row-gap: 40px;
 		column-gap: 70px;
@@ -96,9 +99,83 @@
 		align-items: center;
 		gap: 20px;
 		font-size: 22px;
-		height: 60px
+		height: 60px;
+		img {
+			width: 50px;
+		}
 	}
 	&_text {
-		width: 490px;
+		max-width: 430px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 1350.98px) {
+	.transloading-solution {
+		padding: 100px 0;
+		&_assets {
+			margin-top: 100px;
+		}
+		&_items {
+			width: fit-content;
+			align-items: start;
+			row-gap: 10px;
+			column-gap: 30px;
+			line-height: 30px;
+		}
+		&_item {
+			align-items: start;
+			gap: 16px;
+			font-size: 20px;
+			height: 60px;
+			img {
+				width: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991.98px) {
+	.transloading-solution {
+		&_items {
+			height: fit-content;
+			margin: 100px auto 0px auto;
+			padding-left: 10px;
+		}
+	}
+}
+
+@media (max-width: 720.98px) {
+	.transloading-about {
+		padding: 100px 0;
+		&_items {
+			margin-top: 60px;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 479.98px) {
+	.transloading-about {
+		&_item {
+			&:before {
+				left: 1em;
+			}
+			&_descr {
+				width: 240px;
+				line-height: 16px;
+			}
+		}
+	}
+	.transloading-solution {
+		&_items {
+			row-gap: 24px;
+		}
+		&_item {
+			font-size: 18px;
+			line-height: 20px;
+			height: fit-content;
+		}
 	}
 }

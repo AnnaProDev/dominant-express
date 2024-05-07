@@ -2,6 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 10px;
 	&_small {
 		height: 48px;
 		width: 180px;
@@ -9,9 +10,6 @@
 		cursor: pointer;
 		transition: all 0.4s;
 		color: $first-color;
-		a {
-			color: $first-color;
-		}
 		&:hover {
 		background-color: $main-color;
 		}
@@ -28,12 +26,66 @@
 			color: $first-color;
 			}
 	}
-	.button_text {
+	&_white {
+		margin-top: 20px;
+		border: 4px solid $first-color;
+		&:hover {
+			background-color: $first-color;
+			color: $main-color;
+		}
+	}
+	&_text {
 		font-weight: bold;
 		text-align: center;
 		line-height: 30px;
 		&_big {
 			font-size: 22px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.button {
+		&_big {
+			height: 96px;
+			width: 300px;
+			&_hover {
+				background-color: $main-color;
+			}
+		}
+		&_small {
+			width: 130px;
+			color: $first-color;
+			a {
+				font-size: 14px;
+			}
+			&:hover {
+			background-color: none;
+			}
+		}
+	}
+	.button .button_text_big {
+		font-size: 18px;
+	}
+}
+
+
+@media (max-width: 479.98px) {
+	.button {
+		&_big {
+			height: 80px;
+			width: 100%;
+		}
+		&_small {
+			width: 100px;
+			height: 40px;
+			color: $first-color;
+			a {
+				font-size: 10px;
+			}
+			&:hover {
+			background-color: $second-color;
+			}
 		}
 	}
 }

@@ -4,6 +4,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 16px;
 	}
 	&_item {
 		width: 272px;
@@ -26,15 +27,78 @@
 
 	}
 	.red_card {
-		height: 272px;
+		height: 100%;
 		background-image: url("../../svgicons/red-card.svg");
+		background-size: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
-	.button_small {
-		margin-top: 20px;
-		border: 4px solid $first-color;
-		&:hover {
-			background-color: $first-color;
-			color: $main-color;
+
+}
+
+@media (max-width: 991.98px) {
+	.contacts {
+		.container {
+			height: 200px;
+			padding: 0 0 0 20px;
 		}
+		&_item {
+			width: 200px;
+			height: 120px;
+			&_text {
+				font-size: 14px;
+				p {
+					text-align: center;
+					line-height: 25px;
+				}
+			}
+	
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.contacts {
+		.container {
+			height: 200px;
+			padding: 0 0 0 10px;
+		}
+		&_item {
+		svg {
+			width: 50%;
+		}
+		}
+	}
+	.text_small {
+		display: none;
+	}
+	.red_card {
+		background-color:$main-color;
+		background-image: url("../../svgicons/red-card.svg");
+		svg {
+			width: 60%;
+		}
+	}
+}
+
+@media (max-width: 479.98px) {
+	.contacts {
+		.container {
+			height: 100px;
+		}
+	}
+	.contacts_item {
+		&_text {
+			margin-top: 0;
+		}
+		svg {
+			height: 50px;
+		}
+	}
+	.text_small {
+		display: none;
+	}
+	.red_card {
+		display: none;
 	}
 }

@@ -28,3 +28,21 @@
 	}
 
 }
+
+@media (max-width: 991.98px) {
+	.get-quote {
+		&_border {
+			padding: 60px 50px;
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+}
+
+@media (max-width: 479.98px) {
+	.get-quote {
+		&_subtitle {
+			font-size: 28px;
+		}
+	}
+}

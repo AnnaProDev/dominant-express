@@ -10,13 +10,16 @@
 		background-image: url("../img/main-background.png");
 	}
 	&_warehousing {
-		background-image: url("../img/bg_warehousing.png")
+		background-image: url("../img/bg_warehousing.png");
+		background-position: 90%;
 	}
 	&_transloading {
-		background-image: url("../../img/bg-transloading.png")
+		background-image: url("../../img/bg-transloading.png");
+		background-position: 30%;
 	}
 	&_trucking {
-		background-image: url("../../img/bg-trucking.png")
+		background-image: url("../../img/bg-trucking.png");
+		background-position: 90%;
 	}
 	&_title {
 		color: $first-color;
@@ -38,4 +41,46 @@
 		text-align: center;
 	}
 
+}
+
+@media (max-width: 1200.98px) {
+	.main {
+		&_title {
+			font-size: 38px;
+			line-height: 46px;
+		}
+		&_descr {
+			width: fit-content;
+			font-size: 22px;
+		}
+	}
+}
+
+@media (max-width: 639.98px) {
+	.main {
+		&_title {
+			font-size: 34px;
+			line-height: 46px;
+		}
+		&_descr {
+			margin-top: 30px;
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+}
+
+@media (max-width: 479.98px) {
+	.main {
+		&_title {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		&_descr {
+			margin-top: 20px;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: normal;
+		}
+	}
 }

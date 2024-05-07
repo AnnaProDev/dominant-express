@@ -72,3 +72,37 @@
 	background-image: url("../img/full-service-bg.png");
 	padding: 150px 0;
 }
+
+@media (max-width: 991.98px) {
+	.warehousing-about {
+		padding: 100px 0;
+		&_cards {
+			margin-top: 30px;
+			gap: 30px;
+		}
+		&_card {
+			margin-top: 30px;	
+		}
+	}
+	.warehousing-solution {
+		padding: 100px 0;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.warehousing-about {
+		&_card {
+			width: 320px;
+			&_img {
+				width: 100%;
+				&_active {
+					filter: brightness(50%);
+				}
+			}
+			&_descr {
+				line-height: 18px;
+				font-size: 14px;
+			}
+		}
+	}
+}

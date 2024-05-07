@@ -43,8 +43,8 @@
 		transform: scale(1.2);
 		transition: all 0.3s ease;
 		&:hover {
-			transform: scale(1);
-			filter: invert(20%);
+			transform: scale(1.05);
+			filter: invert(25%);
 		}
 	}
 	&_name {
@@ -57,14 +57,51 @@
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: 24px;
-			color: $first-color;
+			color: #ffff;
 			letter-spacing: 1px;
 		}
 		&_line {
 			margin: 10px 0;
 			height: 4px;
-			width: 210px;
-			background-color: $first-color;
+			max-width: 210px;
+			background-color: #ffff;
+		}
+	}
+}
+
+@media (max-width: 991.98px) {
+	.services {
+		height: fit-content;
+		padding: 100px 0;
+		&_items {
+			margin-top: 70px;
+		}
+		&_item {
+			height: 280px;
+			max-width: 180px;
+		}
+		&_name {
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 560.98px) {
+	.services {
+		&_items {
+			flex-direction: column;
+		}
+		&_item {
+			position: relative;
+			height: 380px;
+			max-width: 100%;
+		}
+		&_name {
+			p {
+				font-size: 24px;
+			}
 		}
 	}
 }

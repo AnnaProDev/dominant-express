@@ -3,7 +3,8 @@
 	padding: 150px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("../../img/truck-driving-on-the-road-black-white-sketch-landscape-illustration-vector-2GNP7W5 1.png");
+	background-image: url("../../img/truck-driving-on-the-road.webp");
+	background-color: $first-color;
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -38,7 +39,7 @@
 		display: inline-block;
 		max-width: 100%;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		position: relative;
 		transform: scale(1.2);
 		transition: all 0.3s ease;

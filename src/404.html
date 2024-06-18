@@ -1,7 +1,16 @@
 @@include('html/head.html')
 <body>
 	@@include('html/header.html')
-	<h1>You are 404</h1>
+	<section class="error404">
+		<div class="container">
+			<h1 class="error404_title">404 Error</h1>
+			<p class="error404_subtitle">The page you are looking for cannot be found.</p>
+			<div class="button button_small">
+				<a href="/" class="button_text transition">GO BACK HOME</a>
+			</div>
+ 		 </div>
+	</section>
+
 	@@include('html/footer.html')
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="js/app.min.js"></script>

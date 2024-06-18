@@ -13,7 +13,8 @@
 		gap: 20px;
 	}
 	&_link {
-		width: 250px ;
+		width: 250px;
+		height: 146px;
 	}
 	&_nav {
 		text-transform: uppercase;
@@ -60,6 +61,10 @@
 		}
 		&_social {
 			transition: all 0.3s ease;
+			&_icon {
+				width: 40px ;
+				height: 40px ;
+			}
 			&:hover {
 				transform: scale(1.2);
 			}
@@ -72,8 +77,8 @@
 		left: 50%;
 		color: #aeaaaa;
 		transform:translate(-50%, -50%);
-		width: 100%;
 		font-size: 14px;
+		min-width: 270px;
 	}
 }
 

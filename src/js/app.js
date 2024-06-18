@@ -2,6 +2,9 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
 
+AOS.init();
+
+
 //Mask for phone number
 if (document.querySelector('input[type="tel"]')) {
 	document.querySelector('input[type="tel"]').addEventListener('input', function (e) {
@@ -10,6 +13,127 @@ if (document.querySelector('input[type="tel"]')) {
 	 });
 	}
 
+//Smooth scroll
+// document.addEventListener('DOMContentLoaded', function() {
+// 	document.body.style.display = 'none';
+ 
+// 	setTimeout(function() {
+// 	  document.body.style.display = 'block';
+// 	  document.body.style.opacity = '1';
+// 	  document.body.style.transition = 'opacity 2s';
+// 	}, 0);
+ 
+// 	document.querySelectorAll('a.transition').forEach(function(element) {
+// 	  element.addEventListener('click', function(event) {
+// 		 event.preventDefault();
+// 		 const linkLocation = this.href;
+ 
+// 		 setTimeout(function() {
+// 			document.body.style.opacity = '0';
+// 			document.body.style.transition = 'opacity 1s';
+// 		 }, 0);
+ 
+// 		 setTimeout(function() {
+// 			window.location = linkLocation;
+// 		 }, 700);
+// 	  });
+// 	});
+//  });
+
+
+ //Validation for form
+ document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('form')) {
+	const form = document.getElementById('form');
+	form.addEventListener('submit', formSend);
+
+	 async function formSend(e) {
+		e.preventDefault();
+
+		let buttons = this.querySelectorAll('button[type=submit]');
+		for (var i = 0; i < buttons.length; i++) {
+		buttons[i].disabled = true;
+		}
+
+		let error = formValidate(form);
+
+		let formData = new FormData(form);
+
+		if (error === 0) {
+			form.classList.add('_sending');
+			let response = await fetch('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.status === 200) {
+				form.reset();
+				form.classList.remove('_sending')
+				modal();
+			} else {
+				alert(`Error ${response.status}`);
+				form.classList.remove('_sending')
+			}
+		} else {
+			alert("Please fill out the required fields")
+		}
+	 }
+	
+	 function formValidate(form) {
+		let error = 0;
+		let formReq = document.querySelectorAll('._req');
+
+		for (let index = 0; index < formReq.length; index++) {
+			const input = formReq[index];
+			formRemoveError(input);
+
+			if(input.classList.contains('_email')) {
+				if( emailTest(input)) {
+					formAddError(input);
+					error++;
+				}
+			} else {
+				if (input.value === '') {
+					formAddError(input);
+					error++;
+				}
+			}
+		}
+		return error;
+	 }
+	
+	 function formAddError(input) {
+		input.parentElement.classList.add('_error');
+		input.classList.add('_error');
+	 }
+
+	 function formRemoveError(input) {
+		input.parentElement.classList.remove('_error');
+		input.classList.remove('_error');
+	 }
+	}
+	//Pop up after submit
+	function modal() {
+			const overlay = document.querySelector('#overlay');
+			const modal = document.querySelector('.modal');
+			const close = document.querySelector('.modal_close');
+
+			overlay.classList.add("open");
+			modal.classList.add("open_content");
+		
+			close.addEventListener('click', function() {
+
+			overlay.classList.remove("open");
+			modal.classList.remove("open_content");
+			});
+	}
+
+	 //Function for test email-input
+	 function emailTest(input) {
+		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+	 }
+});
+
+//Menu hamburger
 	window.addEventListener('DOMContentLoaded', () => {
 		//Menu-hamburger
 		 const menu = document.querySelector('.menu');
@@ -63,6 +187,7 @@ cards.forEach((card, i) => {
     });
 });
 
+// Elements with class "transloading-about_card"
 const items = document.querySelectorAll(".transloading-about_item");
 
 items.forEach((item, i) => {
@@ -111,6 +236,32 @@ items.forEach((item, i) => {
 
 // Get the current year
 var currentYear = new Date().getFullYear();
-
-// Update the year in the HTML
 document.getElementById("currentYear").textContent = currentYear;
+
+document.addEventListener('DOMContentLoaded', () => {
+	const contentDiv = document.getElementById('content');
+	const links = document.querySelectorAll('.nav-link');
+
+	links.forEach(link => {
+		 link.addEventListener('click', (event) => {
+			  event.preventDefault();
+			  const page = event.target.getAttribute('data-page');
+
+			  // Fade out the current content
+			  contentDiv.classList.add('hidden');
+
+			  // Load new content after fade-out effect
+			  setTimeout(() => {
+					fetch(page)
+						 .then(response => response.text())
+						 .then(data => {
+							  contentDiv.innerHTML = data;
+							  contentDiv.classList.remove('hidden');
+						 })
+						 .catch(error => {
+							  console.error('Error loading page:', error);
+						 });
+			  }, 500); // Adjust the timeout to match the CSS transition duration
+		 });
+	});
+});

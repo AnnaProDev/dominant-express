@@ -5,34 +5,33 @@
 		<div class="container">
 			<div class="subtitle">
 				<h1 class="subtitle_text subtitle_black">REQUEST A QUOTE</h1>
-				</div>
-				<div class="form">
-					<form id="book-form" action="#"></form>			
+			</div>
+			<div class="form_wrapper">
+				<form id="form" action="#" class="form">
 					<div class="form_item">
-						<input class="form_input" type="text" placeholder="Full Name *">
+						<input required class="form_input _req" type="text" placeholder="Full Name *" name ="FullName">
 					</div>
 					<div class="form_item">
-						<input class="form_input" type="text" placeholder="Company Name">
+						<input class="form_input" type="text" placeholder="Company Name" name="company" >
 					</div>
 					<div class="form_item">
-						<input class="form_input" type="email" placeholder="email address *">
+						<input required class="form_input _email _req" type="email" placeholder="email address *" name="email">
 					</div>
 					<div class="form_item">
-						<input id="phone" class="form_input" type="tel" placeholder="phone number *">
+						<input required id="phone" name="phone" class="form_input _req" type="tel" placeholder=" (xxx) xxx-xxxx *">
 					</div>
 					<a class="privacy" href="https://www.termsfeed.com/live/9956850e-fa89-4ce2-9327-ac82a7edc399">Data protected and privacy</a>
 					<button type="submit" class="form_button">REQUEST A QUOTE</button>
-					</div>
+				</form>			
 
+			</div>
 		</div>
 	</section>
-	<div class="overlay">
-		<div class="popup" id="thanks">
-			<div class="subtitle">
-				<h3>Thank you!</h3> 
-				<div class="mt40" >your REQUEST has been sent</div>
-			</div>
-			<div class="button_small popup_button">close</div>		
+	<div class="overlay" id="overlay">
+		<div class="modal">
+			<div class="modal_close">&times;</div>
+			<div class="subtitle_text subtitle_red">Thank you for your application!</div>
+			<div class="section_descr">Our manager will contact you soon!</div>			
 		</div>
 	</div>
 	@@include('html/footer.html')

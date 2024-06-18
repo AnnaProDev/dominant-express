@@ -1,4 +1,5 @@
 .warehousing-about {
+	background-color: $first-color;
 	padding: 150px 0;
 	&_cards {
 		margin-top: 70px;
@@ -69,7 +70,7 @@
 	min-height: 930px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("../img/full-service-bg.png");
+	background-image: url("../img/full-service-bg.webp");
 	padding: 150px 0;
 }
 

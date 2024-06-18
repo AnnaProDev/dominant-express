@@ -1,0 +1,42 @@
+.error404 {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.container {
+		padding: 154px 10px;
+		max-width: 800px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&_title {
+		margin-top: 30px;
+		display: block;
+		font-size: 68px;
+		font-weight: bold;
+		color: $main-color;
+		text-transform: uppercase;
+		width: fit-content;
+	}
+	&_subtitle {
+		margin-top: 30px;
+		display: block;
+		font-size: 22px;
+		font-weight: bold;
+		color: $main-color;
+		width: fit-content;
+	}
+	.button_small {
+		margin-top: 30px;
+		background-color: $main-color;
+	}
+	.button_small:hover {
+		background-color: $first-color;
+		color: $main-color;
+	}
+	.button_text {
+		line-height: 14px;
+	}
+}

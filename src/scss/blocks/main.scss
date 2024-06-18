@@ -6,19 +6,21 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 45%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	&_first {
-		background-image: url("../img/main-background.png");
+		background-image: url("../img/main-background.webp");
 	}
 	&_warehousing {
-		background-image: url("../img/bg_warehousing.png");
+		background-image: url("../img/bg_warehousing.webp");
 		background-position: 90%;
 	}
 	&_transloading {
-		background-image: url("../../img/bg-transloading.png");
+		background-image: url("../../img/bg-transloading.webp");
 		background-position: 30%;
 	}
 	&_trucking {
-		background-image: url("../../img/bg-trucking.png");
+		background-image: url("../../img/bg-trucking.webp");
 		background-position: 90%;
 	}
 	&_title {
@@ -40,7 +42,6 @@
 		line-height: 35px;
 		text-align: center;
 	}
-
 }
 
 @media (max-width: 1200.98px) {
